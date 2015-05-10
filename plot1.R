@@ -1,0 +1,22 @@
+# create histogramm on global active power
+
+plot1 <- function(){
+      # first get data, but only if necessary - it is checked whether there is an object 
+      # called dataset, and if there is, if it has the right amount of rows. If it has, 
+      # the plot is created using the existing dataset-object, if it isn't it is recreated
+      if(!exists("dataset") | !nrow(dataset)==2880){
+            source("PrepData.R")
+            PrepData()
+      }
+      
+      # prepare file to put graph in, explicitly mentioning the size (identical to default though)
+      png(filename = "plot1.png", width = 480, height = 480)
+      
+      # produce graph to put in png-file
+      par(mar = c(4, 4, 4, 2))
+      hist(dataset$Global_active_power, col="red", xlab = "Global Active Power (kilowatts)", 
+           ylab = "Frequency", main = "Global Active Power")
+      
+      # close png device
+      dev.off()
+}
