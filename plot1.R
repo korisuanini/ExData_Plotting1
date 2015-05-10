@@ -2,8 +2,8 @@
 
 plot1 <- function(){
       # first get data, but only if necessary - it is checked whether there is an object 
-      # called dataset, and if there is, if it has the right amount of rows. If it has, 
-      # the plot is created using the existing dataset-object, if it isn't it is recreated
+      # called dataset. If there is, 
+      # the plot is created using the existing dataset-object, if not it is recreated
       if(!exists("dataset")){
             # save source url
             
