@@ -1,6 +1,8 @@
 # create four plots in one file 
-# first: global active power across the two days
-# second: 
+# first (top left): global active power across the two days
+# second (top right): voltage across the two days
+# third (bottom left): energy sub metering 1-3 across the two days, color-coded
+# fourth (bottom right): global reactive power across the two days
 
 plot4 <- function(){
       # first get data, but only if necessary - it is checked whether there is an object 
