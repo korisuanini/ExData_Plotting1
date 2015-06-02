@@ -1,5 +1,6 @@
 # create plot of global active power across the two days
 
+
 plot2 <- function(){
       # first get data, but only if necessary - it is checked whether there is an object 
       # called dataset. If there is, 
@@ -30,7 +31,8 @@ plot2 <- function(){
             # extract subset with the two wanted dates and get it out for plotting
             dataset <<- data[data$Date %in% c(as.Date("2007-02-01"),as.Date("2007-02-02")),]
       }
-            
+      
+      
       # prepare file to put graphic in, explicitly mentioning the size (identical to default though)
       png(filename = "plot2.png", width = 480, height = 480)
       

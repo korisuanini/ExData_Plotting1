@@ -1,5 +1,6 @@
 # create histogramm on global active power
 
+
 plot1 <- function(){
       # first get data, but only if necessary - it is checked whether there is an object 
       # called dataset. If there is, 
